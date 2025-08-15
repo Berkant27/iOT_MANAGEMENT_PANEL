@@ -1,0 +1,26 @@
+# Sanal ortam
+venv/
+__pycache__/
+*.pyc
+
+# İşletim sistemi dosyaları
+*.exe
+*.dll
+*.obj
+*.o
+*.d
+*.log
+Thumbs.db
+Desktop.ini
+
+# IDE dosyaları (VSCode)
+.vscode/
+*.code-workspace
+
+# SQLite geçici dosyaları
+*.db-journal
+database.db
+
+# Windows’un gizli dosyaları
+$RECYCLE.BIN/
+System Volume Information/

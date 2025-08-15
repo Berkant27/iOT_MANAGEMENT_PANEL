@@ -12,5 +12,5 @@ Bu proje, IoT cihazlarını yönetmek için bir web uygulamasıdır. Kullanıcı
 ## Kurulum
 1. Depoyu klonlayın veya dosyaları indirin:
    ```bash
-   git clone https://github.com/Berkant27/iot_management_panel.git
+   git clone https://github.com/Berkant27/iOT_MANAGEMENT_PANEL
    cd iot_management_panel

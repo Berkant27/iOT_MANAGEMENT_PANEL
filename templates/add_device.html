@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Cihaz Ekle</h2>
+<form method="POST" action="/add_device">
+    <div class="mb-3">
+        <label for="name" class="form-label">Cihaz Adı</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="type" class="form-label">Cihaz Tipi</label>
+        <input type="text" class="form-control" id="type" name="type" required>
+    </div>
+    <div class="mb-3">
+        <label for="status" class="form-label">Durum</label>
+        <select class="form-select" id="status" name="status">
+            <option value="Açık">Açık</option>
+            <option value="Kapalı">Kapalı</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+{% endblock %}

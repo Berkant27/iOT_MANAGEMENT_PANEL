@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<h4>Son 10 Sıcaklık Verisi</h4>
+{% if data %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cihaz ID</th>
+            <th>Veri Tipi</th>
+            <th>Değer (°C)</th>
+            <th>Zaman</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>Henüz veri bulunmamaktadır. MQTT ile veri gönderin veya manuel ekleyin.</p>
+{% endif %}
+{% endblock %}

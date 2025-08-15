@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Cihaz Listesi</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Tip</th>
+            <th>Durum</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for device in devices %}
+        <tr>
+            <td>{{ device[0] }}</td>
+            <td>{{ device[1] }}</td>
+            <td>{{ device[2] }}</td>
+            <td>{{ device[3] }}</td>
+            <td>
+                <a href="{{ url_for('toggle', device_id=device[0], status='Açık' if device[3] == 'Kapalı' else 'Kapalı') }}"
+                   class="btn btn-sm btn-primary">
+                    {{ 'Kapat' if device[3] == 'Açık' else 'Aç' }}
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
